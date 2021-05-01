@@ -26,7 +26,7 @@ function Investor() {
                     btn={false}
                     invest
                 />
-                {/* <button>Load More</button> */}
+                <button>Load More</button>
             </div>
         </div>
     )

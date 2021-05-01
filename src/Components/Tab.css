@@ -16,3 +16,8 @@
   font-size: 1.4rem;
   border-bottom: 2px solid darkgrey;
 }
+
+.tab > a {
+  text-decoration: none;
+  color: white;
+}

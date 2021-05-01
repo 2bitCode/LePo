@@ -34,3 +34,28 @@ li:hover {
   width: 5%;
   padding: 12px;
 }
+
+@media only screen and (max-width: 572px) {
+  .header > h1 {
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    color: white;
+  }
+  .header > ul {
+    margin-right: 3vw;
+  }
+  li {
+    font-size: 1rem;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+  }
+  li:hover {
+    font-size: 1.1rem;
+  }
+  .header > img {
+    display: none;
+  }
+}

@@ -12,12 +12,14 @@
 .invest {
   background-color: darkgreen;
   color: white;
-  height: 200px;
+  height: 180px;
 }
 
 .invest > p {
-  margin-top: 3.5vw;
-  font-size: larger;
+  margin-top: 1.4vw;
+  font-size: x-large;
+  display: inline-block;
+  text-align: center;
 }
 
 .box > h2 {
@@ -37,4 +39,19 @@
 
 .show {
   display: inline;
+}
+
+@media only screen and (max-width: 572px) {
+  .box {
+    /* width: 60%; */
+    display: inline-block;
+    text-align: center;
+    height: 240px;
+  }
+  .invest {
+    height: 100;
+  }
+  .invest > p {
+    margin-top: 12vw;
+  }
 }

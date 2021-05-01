@@ -1,0 +1,21 @@
+.government {
+  display: flex;
+  background: no-repeat center center fixed
+    url("./images/contact_partners_handshake.jpg");
+  background-size: cover;
+}
+
+.government > .gov-right {
+  flex: 1;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/* .gov-right > button {
+  display: inline-block;
+  text-align: center;
+  background-color: green;
+  border-radius: 4px;
+  border: none;
+  font-size: large;
+} */

@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  flex: 1;
+  /* background-color: white; */
+  margin-top: 16vw;
+  margin-bottom: 16vw;
+  padding: 35px;
+  margin-right: -2vw;
+}
+
+.form > input {
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 15px;
+  margin: 5px;
+  width: 30%;
+}
+
+.form > .clickMe {
+  width: 35%;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  background-color: #f6f5f4;
+}
+
+.form > .clickMe > div > button {
+  padding: 5px;
+  border: none;
+  font-size: larger;
+  color: gray;
+  cursor: pointer;
+}
+
+.form > .clickMe > .on {
+  border-bottom: 2px solid green;
+  color: green;
+  border-right: 2px solid gray;
+  font-size: larger;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form > .col-1000 {
+    width: 50%;
+  }
+  .form > input {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 572px) {
+  .form > .col-1000 {
+    width: 100%;
+  }
+  .form > input {
+    width: 100%;
+  }
+}

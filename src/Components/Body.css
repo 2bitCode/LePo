@@ -1,0 +1,15 @@
+.body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.body > .col1 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 572px) {
+  .body {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,37 @@
+.login {
+  background: no-repeat center center fixed
+    url("./images/contact_partners_handshake.jpg");
+  display: flex;
+  background-size: cover;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login > .left > h1 {
+  font-size: 3rem;
+  color: green;
+}
+
+.login > .left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vw;
+}
+
+.login > .left > p {
+  color: white;
+}
+.login > .left > img {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 572px) {
+  .login {
+    flex-direction: column;
+  }
+  .login > .left > img {
+    width: 70%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}

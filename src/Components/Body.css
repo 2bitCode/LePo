@@ -1,14 +1,28 @@
 .body {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
 }
 
-.body > .col1 {
+.body > h1 {
+  font-size: 3rem;
+  border-bottom: 2px solid grey;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.body > .cards > .col1 {
   display: flex;
   flex-direction: column;
 }
 
-.body > .col2 {
+.body > .cards > .col2 {
   display: flex;
   flex-direction: column;
 }

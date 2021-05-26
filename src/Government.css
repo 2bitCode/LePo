@@ -1,11 +1,17 @@
 .government {
-  display: flex;
-  background: no-repeat center center fixed
-    url("./images/contact_partners_handshake.jpg");
-  background-size: cover;
+  /* display: flex; */
+  position: relative;
 }
 
-.government > .gov-right {
+.government > .gov-body {
+  display: flex;
+}
+
+.government > .gov-body > .gov-left {
+  margin-top: 5em;
+}
+
+.government > .gov-body > .gov-right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -14,12 +20,14 @@
 .gov-right > button {
   align-self: center;
   background-color: green;
-  border-radius: 4px;
+  border-radius: 10px;
   border: none;
   font-size: large;
-  width: 10%;
+  width: 20%;
   color: white;
   font-size: x-large;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 572px) {

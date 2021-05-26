@@ -1,55 +1,107 @@
-import React, {useState} from 'react'
-import './Form.css'
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
+import React, { useState } from "react";
+import "./Form.css";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function Form() {
+  const [on, setOn] = useState("c");
+  const [state, setState] = useState({
+    email: "",
+    username: "",
+    password: "",
+    errors: {},
+  });
 
-    const [email, setEmail] = useState("");
-    const [userName, setUserName] = useState("");
-    const [password, setPassword] = useState("");
-    const [on, setOn] = useState("c");
-
-    return (
-        <div className="form">
-            <div class="clickMe col-1000">
-                <div className={on=='c' && "on"}>
-                <button onClick={() => setOn("c")}>Company</button>
-                </div>
-                <div className={on=='i' && "on"}>
-                <button onClick={() => setOn("i")}>Investor</button>
-                </div>
-                <div className={on=='g' && "on"}>
-                <button onClick={() => setOn("g")}>Government</button>
-                </div>
-            </div>
-            <input 
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-            />
-            <input 
-
-                type="text"
-                placeholder="Username"
-                value={userName}
-                onChange={e => setUserName(e.target.value)}
-            />
-            <input 
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-            />
-            <p>Forget Password <strong style={{color: 'green'}}>Click here</strong></p>
-            <div className="signUp-btn">
-                <Link to={on=='c' ? 'company' : on=='i' ? 'investor' : 'gov'}><button className="col-1000" style={{backgroundColor: 'green', padding:'10px', width:'100%', color:'white', border:'none', cursor:'pointer'}}>SIGN UP</button></Link>
-            </div>
-        </div>
-    )
+  return (
+    <div className="form">
+      <div class="clickMe col-1000">
+        <button className={on == "c" && "on"} onClick={() => setOn("c")}>
+          Company
+        </button>
+        <button className={on == "i" && "on"} onClick={() => setOn("i")}>
+          Investor
+        </button>
+        <button className={on == "g" && "on"} onClick={() => setOn("g")}>
+          Government
+        </button>
+      </div>
+      <div className="input-fields" onSubmit={() => console.log("submitted")}>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={state.email}
+          onChange={(e) => {
+            setState({ email: e.target.value });
+            const checker = /@gmail.com$/g;
+            if (!checker.test(e.target.value)) {
+              setState({ errors: { emailErr: "! Invalid Email" } });
+            } else {
+              setState({ errors: { email: "" } });
+            }
+          }}
+          required
+        />
+        <span style={{ color: "red", fontWeight: "bold" }}>
+          {state.errors["emailErr"]}
+        </span>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={state.userame}
+          onChange={(e) => {
+            setState({ username: e.target.value });
+            const checker = /\w{4,}/g;
+            if (!checker.test(e.target.value)) {
+              setState({
+                errors: {
+                  nameErr: "! Username must contain at least four characters",
+                },
+              });
+            } else {
+              setState({ errors: { nameErr: "" } });
+            }
+          }}
+        />
+        <span style={{ color: "red", fontWeight: "bold" }}>
+          {state.errors["nameErr"]}
+        </span>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={state.password}
+          onChange={(e) => {
+            setState({ password: e.target.value });
+            const checker = e.target.value;
+            if (checker.length == 0) {
+              setState({
+                errors: {
+                  passwordErr: "Password should not be empty",
+                },
+              });
+            } else {
+              setState({ errors: { nameErr: "" } });
+            }
+          }}
+        />
+        <span
+          style={{
+            color: "red",
+            fontWeight: "bold",
+          }}
+        >
+          {state.errors["passwordErr"]}
+        </span>
+      </div>
+      <p>
+        Forget Password <strong style={{ color: "green" }}>Click here</strong>
+      </p>
+      <Link to={on == "c" ? "company" : on == "i" ? "investor" : "gov"}>
+        <button className="signUp-btn">SIGN UP</button>
+      </Link>
+    </div>
+  );
 }
 
-export default Form
+export default Form;

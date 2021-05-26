@@ -24,10 +24,11 @@
 
 @media only screen and (max-width: 572px) {
   .tab {
-    font-size: 1.2rem;
-    padding: 35px 0 25px 0;
+    font-size: 1rem;
+    padding: 1em 0.5em 1em 0.2em;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
-  tab:hover {
-    font-size: 1.3rem;
+  .tab:hover {
+    font-size: 1.1rem;
   }
 }

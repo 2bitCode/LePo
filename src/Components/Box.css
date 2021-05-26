@@ -1,25 +1,100 @@
 .box {
-  background-color: white;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  padding: 2vw 2vw 0 1.2vw;
+  border-radius: 15px;
+  padding: 2em 1.2em 0 1em;
   margin: 1vw 0 3.6vw 0;
-  /* align-self: baseline; */
-  height: 320px;
+  min-height: 320px;
+  box-shadow: 5px 5px 5px 5px rgba(22, 9, 9, 0.08);
+  transition: transform 400ms ease-in-out;
+  position: relative;
+  /* background-color: green; */
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box > p {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
 }
 
 .invest {
-  background-color: darkgreen;
-  color: white;
-  height: 180px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.invest::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  background-color: chartreuse;
 }
 
 .invest > p {
-  margin-top: 1.4vw;
-  font-size: x-large;
-  display: inline-block;
-  text-align: center;
+  margin-top: 2em;
+}
+
+.raise-funds::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: no-repeat center url("./../images/raiseFund.jpg");
+  object-fit: contain;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.get-debt::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: no-repeat center center url("./../images/getDebt.jpg");
+  object-fit: contain;
+  background-size: cover;
+  opacity: 0.4;
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: no-repeat center center url("./../images/portfolio.jpg");
+  object-fit: contain;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.contact-us::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: no-repeat center center url("./../images/contactUs.jpg");
+  object-fit: contain;
+  background-size: cover;
+  opacity: 0.3;
 }
 
 .box > h2 {
@@ -27,18 +102,23 @@
 }
 
 #clk-btn {
-  border-radius: 10px;
+  border-radius: 210px;
   align-self: flex-end;
   width: 100%;
   cursor: pointer;
 }
 
 .clk-btn {
-  display: none;
+  /* display: none; */
+  /* align-self: flex-end; */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .show {
-  display: inline;
+  display: block;
 }
 
 @media only screen and (max-width: 572px) {

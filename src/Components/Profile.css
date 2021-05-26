@@ -1,0 +1,48 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: green;
+  border-radius: 2.5em 1em 1em 2.5em;
+}
+
+.profileImg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  /* border-top: 2px solid lightblue; */
+  border-radius: 50%;
+  border-bottom: 2px solid lightblue;
+}
+
+.profileImg > img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.profileName {
+  color: white;
+  font-size: 2rem;
+  border-bottom: 4px solid rgb(171, 230, 250);
+  margin-top: 1.5em;
+  font-weight: 700;
+  width: 70%;
+  text-align: center;
+  border-radius: 0 0 1em 1em;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.description p {
+  font-size: 1.2rem;
+}

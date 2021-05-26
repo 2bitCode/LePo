@@ -3,6 +3,7 @@ import Sidebar from "./Components/Sidebar";
 import Header from "./Components/Header";
 import "./Government.css";
 import Body from "./Components/Body";
+import Profile from "./Components/Profile";
 import { HeaderText, SidebarText, CardBody } from "./content";
 
 function Government() {
@@ -13,7 +14,7 @@ function Government() {
         <div className="gov-left">
           <Sidebar tabText={SidebarText.government} />
         </div>
-        <div className="gov-right">
+        <div className="gov-mid">
           <Body
             h1="Invest"
             c11="Serivce based businesses"
@@ -34,6 +35,9 @@ function Government() {
             bodyText={CardBody.government}
             invest={true}
           />
+        </div>
+        <div className="gov-right">
+          <Profile />
         </div>
       </div>
     </div>

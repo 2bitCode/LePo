@@ -34,6 +34,7 @@
   justify-content: space-evenly;
   flex: 1;
   margin-left: 8em;
+  align-items: center;
 }
 
 li {
@@ -56,30 +57,31 @@ li:hover {
   padding: 12px;
 }
 
-@media only screen and (max-width: 572px) {
-  .header > .profileImg {
-    display: block;
+@media only screen and (max-width: 768px) {
+  .header {
+    border-radius: 0 0 0.5em 0.5em;
   }
-  .header > h1 {
+  .header .left-corner h1 {
     font-size: 1rem;
     display: inline-block;
     text-align: center;
     padding: 0;
     color: white;
   }
-  .header > ul {
-    margin-right: 0.75em;
+  .header .right-corner > ul {
+    margin: 0 1em 0 auto;
+    justify-content: space-between;
+    gap: 0.7em;
   }
   li {
-    font-size: 1rem;
-    padding: 5px;
+    font-size: 0.8rem;
     display: inline-block;
     text-align: center;
   }
   li:hover {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
-  .header > img {
+  .header > .right-corner > img {
     display: none;
   }
 }

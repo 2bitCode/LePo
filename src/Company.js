@@ -2,8 +2,8 @@ import React from "react";
 import Sidebar from "./Components/Sidebar";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
+import Profile from "./Components/Profile";
 import "./Government.css";
-import bgImg from "./images/raiseFund.jpg";
 import { HeaderText, SidebarText } from "./content";
 
 function Company() {
@@ -14,7 +14,7 @@ function Company() {
         <div className="gov-left">
           <Sidebar tabText={SidebarText.company} />
         </div>
-        <div className="gov-right">
+        <div className="gov-mid">
           <Body
             class1="raise-funds"
             h1="Raise funds"
@@ -36,6 +36,9 @@ function Company() {
             c41="Live chat"
             invest={false}
           />
+        </div>
+        <div className="gov-right">
+          <Profile />
         </div>
       </div>
     </div>

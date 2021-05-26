@@ -1,23 +1,22 @@
-.government {
-  /* display: flex; */
-  position: relative;
-}
-
 .government > .gov-body {
   display: flex;
+  position: relative;
+  justify-content: space-between;
 }
 
 .government > .gov-body > .gov-left {
   margin-top: 5em;
 }
 
-.government > .gov-body > .gov-right {
-  flex: 1;
+.government > .gov-body > .gov-mid {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  flex: 1;
+  width: 100%;
 }
 
-.gov-right > button {
+.gov-mid > button {
   align-self: center;
   background-color: green;
   border-radius: 10px;
@@ -30,8 +29,23 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 572px) {
-  .gov-right > button {
+.government > .gov-body > .gov-right {
+  width: 20%;
+  transform: translate(0%, 15%);
+}
+
+@media only screen and (max-width: 768px) {
+  .gov-body {
+    position: relative;
+  }
+  .gov-mid {
+    flex: 1;
+    width: 100%;
+  }
+  .gov-right {
+    display: none;
+  }
+  .gov-mid > button {
     font-size: 1rem;
     width: 50%;
     padding: 8px;

@@ -27,16 +27,17 @@
   flex-direction: column;
 }
 
-@media only screen and (max-width: 572px) {
+@media only screen and (max-width: 768px) {
   .body {
     flex-direction: column;
     align-items: center;
-    margin-top: 5vw;
+    margin-top: 2vw;
   }
-  .body > .col1 {
-    width: 60%;
+  .body > h1 {
+    font-size: 1.2rem;
   }
-  .body > .col2 {
-    width: 60%;
+  .cards {
+    flex-direction: column;
+    width: 70%;
   }
 }

@@ -4,7 +4,7 @@ import "./Sidebar.css";
 import tech from "./../images/tech.png";
 import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
 
-function Sidebar({ tabText, t1, t2, t3, t4, t5 }) {
+function Sidebar({ tabText, page }) {
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -18,7 +18,18 @@ function Sidebar({ tabText, t1, t2, t3, t4, t5 }) {
       <img className={`${clicked && "showImg"}`} src={tech} alt="oops" />
       <div className={`list ${clicked && "showList"}`}>
         {tabText.map((item, index) => (
-          <Tab text={item} />
+          <Tab
+            text={item}
+            to={`${
+              item === "Raise Funds"
+                ? "raise-funds"
+                : item === "Get Debt"
+                ? "get-debt"
+                : item === "Portfolio"
+                ? "portfolio"
+                : page
+            }`}
+          />
         ))}
       </div>
     </div>

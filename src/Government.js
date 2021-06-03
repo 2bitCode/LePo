@@ -12,7 +12,7 @@ function Government() {
       <Header text={HeaderText.government} />
       <div className="gov-body">
         <div className="gov-left">
-          <Sidebar tabText={SidebarText.government} />
+          <Sidebar tabText={SidebarText.government} page="gov" />
         </div>
         <div className="gov-mid">
           <Body
@@ -31,9 +31,8 @@ function Government() {
             c32="See what's your area good for"
             h4="Contact Us"
             c41="Fill contact form"
-            btn
-            bodyText={CardBody.government}
-            invest={true}
+            btn={true}
+            gov
           />
         </div>
         <div className="gov-right">

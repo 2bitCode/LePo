@@ -12,7 +12,7 @@ function Investor() {
       <Header text={HeaderText.investor} />
       <div className="gov-body">
         <div className="gov-left">
-          <Sidebar tabText={SidebarText.investor} />
+          <Sidebar tabText={SidebarText.investor} page="investor" />
         </div>
         <div className="gov-mid">
           <Body

@@ -11,6 +11,10 @@
   /* background-color: green; */
 }
 
+.hide-box {
+  display: none;
+}
+
 .box:hover {
   transform: scale(1.05);
 }
@@ -34,11 +38,34 @@
   left: 0;
   right: 0;
   opacity: 0.6;
-  background-color: chartreuse;
+  background: no-repeat center url("./../images/investbg.jpg");
+  object-fit: contain;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 .invest > p {
   margin-top: 2em;
+}
+
+.gov {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.gov::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  background: no-repeat center url("./../images/govbg.png");
+  object-fit: contain;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 .raise-funds::before {
@@ -109,16 +136,14 @@
 }
 
 .clk-btn {
-  /* display: none; */
-  /* align-self: flex-end; */
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.show {
-  display: block;
+.hide-btn {
+  display: none;
 }
 
 @media only screen and (max-width: 572px) {
@@ -142,5 +167,8 @@
   }
   .invest > p {
     margin-top: 7em;
+  }
+  .hide-box {
+    display: none;
   }
 }

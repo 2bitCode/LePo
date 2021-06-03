@@ -1,13 +1,15 @@
-import React from 'react'
-import './Tab.css'
-import DashboardSharpIcon from '@material-ui/icons/DashboardSharp';
+import React from "react";
+import "./Tab.css";
+import { Link } from "react-router-dom";
 
-function Tab({text, clicked}) {
-    return (
-        <div className={`tab ${clicked && 'clicked'}`}>
-            <a href={text=="Commute" && "https://discord.gg/My8w98Wm5D"}>{text}</a>
-        </div>
-    )
+function Tab({ text, to }) {
+  return (
+    <div className={`tab`}>
+      <Link to={to}>
+        <a href="/raise-funds">{text}</a>
+      </Link>
+    </div>
+  );
 }
 
-export default Tab
+export default Tab;

@@ -12,7 +12,7 @@ function Company() {
       <Header text={HeaderText.company} />
       <div className="gov-body">
         <div className="gov-left">
-          <Sidebar tabText={SidebarText.company} />
+          <Sidebar tabText={SidebarText.company} page="company" />
         </div>
         <div className="gov-mid">
           <Body
@@ -35,6 +35,7 @@ function Company() {
             c41="Fill the form"
             c41="Live chat"
             invest={false}
+            btn={true}
           />
         </div>
         <div className="gov-right">

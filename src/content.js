@@ -49,3 +49,11 @@ export const SidebarText = {
   company: ["Dashboard", "Raise Funds", "Get Debt", "Portfolio", "Commute"],
   investor: ["Dashboard", "Invest", "Learning Resources", "Your Portfolio"],
 };
+
+export const LinkTo = [
+  "company",
+  "raise-funds",
+  "get-debt",
+  "portfolio",
+  "comapny",
+];

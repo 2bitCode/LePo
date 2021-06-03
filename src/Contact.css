@@ -1,67 +1,84 @@
-.c-me {
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(70deg, green, white 90%);
-  color: red;
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  min-height: 100vh;
+  max-width: 100%;
 }
 
-.c-me h1 {
-  text-align: center;
-  font-size: 50px;
-  margin-top: 0px;
+.leftContact {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-.gap {
-  margin-bottom: 2%;
-  color: red;
+.leftContact .bgImg {
+  width: 60%;
+  border: 5px solid grey;
+  object-fit: contain;
+  border-radius: 1em;
 }
 
-.gap:hover {
-  background-image: linear-gradient(white);
+.leftContact .bgImg img {
+  width: 100%;
+  z-index: 1;
 }
 
-.form-c {
-  margin-left: 20%;
+.leftContact .chatIcon {
+  color: green;
+  position: absolute;
+  top: 85%;
+  left: 18%;
+  background-color: white;
 }
 
-.sun-but {
-  margin-left: 19px;
+.rightContact {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
-.sun-but button {
-  margin-top: 10%;
-  height: 50px;
-  width: 200px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 5px 5px black;
+.rightContact .messageField {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.sun-but button {
-  font-size: 20px;
+.rightContact .messageField input {
+  border: none;
   color: black;
-}
-
-.sun-but:hover {
-  color: red;
-}
-
-.touch {
-  margin-left: 40%;
-  margin-top: -30px;
-}
-
-.inl {
-  display: inline-flex;
-  margin-left: 100px;
-  font-size: 30px;
-}
-
-.gap input {
-  height: 30px;
-  width: 200px;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.08);
   border-radius: 10px;
 }
 
-.touch p {
-  margin-top: -30px;
+.rightContact .messageField button {
+  padding: 0.5em;
+  border-radius: 1em;
+  border: none;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.08);
+  background-color: green;
+  color: white;
+}
+
+.rightContact h2 {
+  border-bottom: 2px solid green;
+  text-shadow: 2px 2px 2px green;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .leftContact {
+    width: 100%;
+  }
+
+  .rightContact {
+    width: 100%;
+  }
 }

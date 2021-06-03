@@ -15,7 +15,7 @@ function Header({ text }) {
         <ul>
           <li>Home</li>
           <li>Explore</li>
-          <Link to="contact">
+          <Link to="contact-us">
             <li>Contact Us</li>
           </Link>
         </ul>

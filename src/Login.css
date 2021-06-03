@@ -18,8 +18,9 @@
 .login > .left > h1 {
   font-size: 3rem;
   color: green;
+  position: relative;
+  text-shadow: 5px 5px 5px black;
 }
-
 .login > .left > span {
   color: black;
   font-weight: 700;

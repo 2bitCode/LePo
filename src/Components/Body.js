@@ -18,7 +18,9 @@ function Body({
   c32,
   h4,
   c41,
+  btn,
   invest,
+  gov,
   class1,
   class2,
   class3,
@@ -38,6 +40,8 @@ function Body({
             c3={c13}
             c4={c14}
             invest={invest}
+            btn={btn}
+            gov={gov}
           />
           <Box
             extraClass={class2}
@@ -47,6 +51,8 @@ function Body({
             c3={c23}
             c4={c24}
             invest={invest}
+            btn={btn}
+            gov={gov}
           />
         </div>
         <div className="col2">
@@ -56,8 +62,17 @@ function Body({
             c1={c31}
             c2={c32}
             invest={invest}
+            btn={btn}
+            gov={gov}
           />
-          <Box extraClass={class4} head={h4} c1={c41} invest={invest} />
+          <Box
+            extraClass={class4}
+            head={h4}
+            c1={c41}
+            invest={invest}
+            btn={btn}
+            gov={gov}
+          />
         </div>
       </div>
     </div>
